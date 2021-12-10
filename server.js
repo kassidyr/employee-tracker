@@ -20,9 +20,30 @@ const db = mysql.createConnection(
 );
 
 // Query the database to test the connection
-db.query(`SELECT * FROM department`, (err, rows) => {
-    console.log(rows);
-});
+// db.query(`SELECT * FROM department`, (err, rows) => {
+//     console.log(rows);
+// });
+
+// GET a single department
+// db.query(`SELECT * FROM department WHERE id = 1`, (err, row) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log(row);
+// });
+
+// Delete a department
+// db.query(`DELETE FROM department WHERE id = ?`, 1, (err, result) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log(result);
+// });
+
+// Create a candidate
+// const sql = `INSERT INTO department (id, name) 
+//               VALUES (?,?)`;
+// const params = [1, 'Finance'];
 
 // Default response for any other request (Not Found); should be last route in file
 app.use((req, res) => {
